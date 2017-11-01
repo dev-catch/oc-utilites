@@ -33,18 +33,6 @@ class CreateMigration extends GeneratorCommand
     'migration/migration.stub' => 'updates/',
   ];
 
-//  /**
-//   * Execute the console command.
-//   *
-//   * @return bool|null
-//   */
-//  public function fire()
-//  {
-//    parent::fire();
-//
-//
-//  }
-
   /**
    * Prepare variables for stubs.
    *
