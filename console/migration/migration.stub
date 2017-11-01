@@ -1,0 +1,18 @@
+<?php namespace {{studly_author}}\{{studly_plugin}}\Updates;
+
+use Schema;
+use October\Rain\Database\Schema\Blueprint;
+use October\Rain\Database\Updates\Migration;
+
+class {{studly_classname}}_{{suffix}} extends Migration
+{
+  public function up()
+  {
+    // Run the migrations
+  }
+
+  public function down()
+  {
+    // Reverse the migrations
+  }
+}
