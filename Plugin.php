@@ -32,6 +32,7 @@ class Plugin extends PluginBase
     {
         $this->registerConsoleCommand('create.migration', 'AspenDigital\Utilities\Console\CreateMigration');
         $this->registerConsoleCommand('user.unlock', 'AspenDigital\Utilities\Console\UserUnlock');
+        $this->registerConsoleCommand('log.clear', 'AspenDigital\Utilities\Console\ClearLog');
     }
 
     /**

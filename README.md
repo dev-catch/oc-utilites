@@ -31,4 +31,11 @@
 `$ php artisan user:unlock info@aspendigital.com`
 
 > **NOTE**: This command will also allow you to optionally reset/change the User's password after unlocking the account
+
+---
+### Clear Log File
+
+**Description**: Clear the contents of the `system.log` file
+
+**command**: `$ php artisan log:clear`
  
