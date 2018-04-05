@@ -11,7 +11,7 @@
 **arguments**:
  - plugin: *Required*. The plugin identifier, *Eg: AuthorName.PluginName*
  - name: *Required*. The name of the migration, *Eg: add_email_to_users*
- 
+
 **usage example**:
 
 `$ php artisan create:migration AspenDigital.Ecommerce add_tracking_number_to_orders`
@@ -25,7 +25,7 @@
 
 **arguments**:
  - email: *Required*. The email address of the User to unlock
- 
+
 **usage example**:
 
 `$ php artisan user:unlock info@aspendigital.com`
@@ -38,4 +38,17 @@
 **Description**: Clear the contents of the `system.log` file
 
 **command**: `$ php artisan log:clear`
- 
+
+---
+### Queue Test
+
+**Description**: Submit a test job to the queue
+
+**command**: `$ php artisan queue:test`
+
+If enabled, the queue worker log will output:
+
+```
+Processing: AspenDigital\Utilities\QueueTestJob
+Processed:  AspenDigital\Utilities\QueueTestJob
+```
