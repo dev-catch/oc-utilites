@@ -22,6 +22,10 @@ class QueueTest extends Command
     public function handle()
     {
         $id = Queue::push(new \AspenDigital\Utilities\QueueTestJob);
-        $this->info("Test job submitted to the queue: $id");
+
+        if ($id)
+          $this->info("Test job submitted to the queue: $id");
+        else
+          $this->error("Test job failed. Check your queue configuration.");
     }
 }
