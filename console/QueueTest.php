@@ -22,10 +22,12 @@ class QueueTest extends Command
     public function handle()
     {
         $id = Queue::push(new \AspenDigital\Utilities\QueueTestJob);
+        $queue_driver = strtoupper(config('queue.default'));
+        $cache_store = strtoupper(config('cache.default'));
 
         if ($id)
-          $this->info("Test job submitted to the queue: $id");
+          $this->info("Submitted queue test job | cache: $cache_store, queue: $queue_driver | $id");
         else
-          $this->error("Test job failed. Check your queue configuration.");
+          $this->error("Queue test failed. Check your queue configuration | queue: $queue_driver, cache: $cache_store");
     }
 }

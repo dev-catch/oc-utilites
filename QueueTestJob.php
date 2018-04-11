@@ -12,6 +12,9 @@ class QueueTestJob implements ShouldQueue
 
   public function handle()
   {
-    \Log::info('Aspen Digital Test Job queued and processed. ');
+    $queue_driver = strtoupper(config('queue.default'));
+    $cache_store = strtoupper(config('cache.default'));
+
+    \Log::info("Queue test processed | cache: $cache_store, queue: $queue_driver");
   }
 }
