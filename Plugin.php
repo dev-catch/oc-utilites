@@ -43,7 +43,7 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-
+        require_once('lib/functions.php');
     }
 
     /**

@@ -52,3 +52,17 @@ If enabled, the queue worker log will output:
 Processing: AspenDigital\Utilities\QueueTestJob
 Processed:  AspenDigital\Utilities\QueueTestJob
 ```
+
+## Helper Functions
+
+`toBool($var)`: Convert a variable to boolean.
+
+```php
+toBool("true");    //  true
+toBool("1");       //  true
+toBool(['hello']); //  true
+toBool("false");   //  false
+toBool("0");       //  false
+toBool([]);        //  false
+toBool(null);      //  false
+```
