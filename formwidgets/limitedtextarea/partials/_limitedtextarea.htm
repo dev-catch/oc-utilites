@@ -1,0 +1,21 @@
+<?php if ($this->previewMode): ?>
+
+<div class="form-control">
+  <?= $value ?>
+</div>
+
+<?php else: ?>
+<span class="char-limit">
+  <small class="char-limit__current" id="char-limit-<?= $this->getId('input') ?>"><?= !empty($value) ? strlen($value) : 0 ?></small> / <small class="char-limit__max"><?= $limit ?></small>
+</span>
+<textarea
+  type="text"
+  id="<?= $this->getId('input') ?>"
+  name="<?= $name ?>"
+  class="form-control field-textarea size-<?= $size ?> js-limitedtextarea"
+  maxlength="<?= $limit ?>"
+  autocomplete="off"
+  data-limit="<?= $limit ?>"
+><?= $value ?></textarea>
+
+<?php endif ?>

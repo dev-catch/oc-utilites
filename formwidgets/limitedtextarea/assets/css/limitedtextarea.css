@@ -1,0 +1,7 @@
+.char-limit {
+  float: right;
+}
+
+.char-limit__current.has-error {
+  color: #d40000;
+}

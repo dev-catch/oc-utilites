@@ -1,5 +1,6 @@
 <?php namespace AspenDigital\Utilities;
 
+use AspenDigital\Utilities\FormWidgets\LimitedTextArea;
 use Backend;
 use System\Classes\PluginBase;
 
@@ -57,6 +58,19 @@ class Plugin extends PluginBase
 
         return [
             'AspenDigital\Utilities\Components\MyComponent' => 'myComponent',
+        ];
+    }
+
+    /**
+     * Registers any form widgets implemented in this plugin.
+     */
+    public function registerFormWidgets()
+    {
+        return [
+            LimitedTextArea::class => [
+                'label' => 'Limited Textarea',
+                'code'  => 'limitedtextarea'
+            ]
         ];
     }
 
